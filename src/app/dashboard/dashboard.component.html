@@ -1,0 +1,205 @@
+<app-navbar />
+
+<!-- section 1 -->
+<div class="flex inter-fonts section-1">
+    <div class="text-1">
+        <div>
+            <h3 class="p">EMPOWERING STUDENTS TO EXCEL</h3>
+            <h1><b>Your Gateway to<br/> Effective learning</b> </h1>
+            <div class="input">
+                <input type="search" name="location" class="location" placeholder="Enter Location" />
+                <input type="search" name="search" class="search" placeholder="Search For a Subject Or Skills" />
+                <button type="button" class="btn-search">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="fade-in-image">
+        <img [src]="images[currentIndex]" alt="Random Image">
+    </div>
+</div>
+
+<!-- section 2 -->
+<div class="container">
+<div class="section-2 inter-fonts">
+    <div class="flexs">
+        <h2>Top course of study field</h2>
+        <h4 class="blue">see all</h4>
+    </div>
+
+    <!-- image slider -->
+    <div>
+        <div class="gallery">
+            <ng-image-slider #nav
+              class="slider"
+              [images]="imageObject"
+              [imagePopup]="false"
+              [infinite]="false"
+              [autoSlide]="0"
+              [imageSize]="{width: '300px'}"
+              slideImage="1"
+              (imageClick)="imageClickHandler($event)">
+            </ng-image-slider>
+          </div>
+    </div>
+</div>
+
+<!-- section 3 -->
+
+<div class="section-3 inter-fonts flexs">
+    <div>
+        <img src="../../assets/sec-3.png" alt="" />
+    </div>
+    <div class="content">
+        <h2>Elevate Your Learning Journey with Tutorcen</h2>
+        <p>Welcome to Tutorcen's Events and Seminars! Explore a world of educational experiences. From webinars to 
+            workshops, there's something for everyone. Stay updated on upcoming events ans secure your spot. Let's
+            Learn, grow, and inspire together!
+        </p>
+        <button type="button" class="btn-search">Explore More</button>
+    </div>
+</div>
+
+
+<div class="section-3 inter-fonts flexs">
+    <div class="content">
+        <h2>Join our global team, share your passion</h2>
+        <p>Welcome to Tutorcen's Events and Seminars! Explore a world of educational experiences. From webinars to 
+            workshops, there's something for everyone. Stay updated on upcoming events ans secure your spot. Let's
+            Learn, grow, and inspire together!
+        </p>
+        <button type="button" class="btn-search">Apply for tutor</button>
+    </div>
+    <div>
+        <img src="../../assets/sec-4.png" alt="" />
+    </div>
+</div>
+
+
+
+<div class="section-5 inter-fonts flex-sec5">
+    <div class="content">
+        <button type="button" class="btn-yellow">FIND A TUTOR</button>
+        <h2>Discover Your Perfect Tutor Find Expert Guidence for Every Subject</h2>
+        <button type="button" class="btn-search">Find Tutor</button>
+    </div>
+    <div>
+        <img src="../../assets/section-5.png" alt="" />
+    </div>
+</div>
+
+
+<!-- secction 6 -->
+
+<div class="section-6 inter-fonts">
+    <div class="heading">
+        <h1>
+            How We Redefine the<br />Online Tutoring Experience
+        </h1>
+        <div>
+            <button type="button" class="btn active" >Parent interaction</button>
+            <button type="button" class="btn">Peer Classes</button>
+            <button type="button" class="btn">Discussion Forum</button>
+            <button type="button" class="btn">Quiz</button>
+            <button type="button" class="btn">Explore More</button>
+        </div>
+    </div>
+
+    <div class="section-6 inter-fonts flex-sec6">
+        <div>
+            <img src="../../assets/section-6.png" alt="" />
+        </div>
+        <div class="content">
+            <h2>We respect parent's crucial role in their child's academic journey</h2>
+            <div>
+                <h3>Monitor Your Child's Activity</h3>
+                <p>Keep Track of your child's attendance session participation and progress in real-time 
+                    , giving you insight into their engagement and dedication to learning.
+                </p>
+            </div>
+            <div>
+                <h3>View Detailed Reports</h3>
+                <p>Get comprehensive reports on your child's performance with Totorcen. View session summaries results,
+                   and tutor feedback for a complete overvie of their progress.
+                </p>
+            </div>
+            <div>
+                <h3>Communication with Tutors</h3>
+                <p>Establish direct communication channels with your child's tutor to discuss goals, address concerns and 
+                    collaborate on strategies to enchance your child's leraning experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- section 7 -->
+
+<div class="section-7">
+    <div class="heading">
+        <h1>World Class Tutor's, Global <br /> Learning Reach</h1>
+    </div>
+    <div>
+        <img src="../../assets/section-7.png" alt="map" />
+    </div>
+</div>
+
+<!-- section 8 -->
+
+<div class="section-5 section-8 inter-fonts flex-sec5">
+    <div class="content">
+        <h2>Ready to take your learning journey to the next level ?</h2>
+        <button type="button" class="btn-blue">Get Started</button>
+    </div>
+    <div>
+        <img src="../../assets/section-8.png" alt="" />
+    </div>
+</div>
+<!--  -->
+</div>
+
+<!-- footer -->
+
+<footer >
+<div class="footer  inter-fonts">
+    <div class="footer-content">
+    <div>
+        <img src="../../assets/title-footer.png" alt="" class="footer-img"/>
+    </div>
+        <p>Discover endless learning oppurtunities with tutorcen! Whether you're a student seeking academic support or a 
+            tutor looking to share your experience, Tutorcen is your go-to platform.
+        </p>
+    </div>
+    <div>
+        <h2>About Us</h2>
+        <p>Contact us</p>
+        <p>Voice of success</p>
+        <p>Blog post</p>
+        <p>Best tutors</p>
+    </div>
+    <div>
+        <h2>Policies</h2>
+        <p>Private policy</p>
+        <p>Security</p>
+        <p>Memberships</p>
+        <p>FAQ</p>
+        <p>Terms & use</p>
+        <p>Refund policy</p>
+    </div>
+    <div>
+        <h2>Help & Feedback</h2>
+        <p>Mail Us</p>
+        <p>Share your story</p>
+        <p>Study guide</p>
+        <p>23/7 student support</p>
+        <p>Feedback</p>
+    </div>
+    <div>
+        <h2>Social</h2>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p></p>
+    <h3>Our Other Products & Services</h3>
+    <p></p>
+</div>
+</footer>

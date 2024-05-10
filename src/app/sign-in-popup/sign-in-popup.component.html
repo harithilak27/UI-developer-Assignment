@@ -1,0 +1,48 @@
+<div *ngIf="isOpen" class="popup-overlay" (click)="closePopup()">
+    <div class="popup-content" (click)="stopPropagation($event)">
+      <span class="close" (click)="closePopup()">&times;</span>
+      <div class="container flex inter-fonts">
+        <div class="form ">
+            <div class="head">
+                <h2>Login to Tutorcen</h2>
+                <p>Ready to dive into your learning journey ?</p>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div>
+                  <label for="email"></label>
+                  <input type="email" id="email" class="input" formControlName="email" placeholder="Your email">
+                  <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+                    <div *ngIf="loginForm.get('email')?.errors" class="red">Email is required.</div>
+                    <div *ngIf="loginForm.get('email')?.errors" class="red">Invalid email format.</div>
+                  </div>
+                </div>
+              
+                <div>
+                  <label for="password"></label>
+                  <input type="password" id="password" class="input" formControlName="password" placeholder="password">
+                  <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                    <div *ngIf="loginForm.get('password')?.errors" class="red">Password is required.</div>
+                  </div>
+                </div>
+              
+                <button type="submit" class="submit inter-fonts" routerLink="/" [disabled]="loginForm.invalid">Login</button>
+                <p class="blue">Forget Password ?</p>
+              </form>
+              <div>
+                <div class="footer-bottom">
+                    <p></p>
+                    <h4>or</h4>
+                    <p></p>
+                </div>
+                <button type="button" class="google">Google</button>
+                <button type="button" class="google">Facebook</button>
+              </div>
+              <p>Already have an account ?
+                <button type="button" class="sign-in inter-fonts" class="none"  (click)="closePopup()"><b>Sign In</b></button> </p>   
+        </div>
+        <div class="hidden">
+            <img src="../../assets/signin.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>

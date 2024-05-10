@@ -1,0 +1,58 @@
+<div>
+    <div class="flex">
+        <div class="hidden">
+            <img src="../../assets/signup.png" alt="" />
+        </div>
+        <!-- <div> -->
+        <div class="section-2 inter-fonts">
+            <div>
+                <p class="light" routerLink="/"> <- Back To Home</p>
+            </div>
+            <h1>Create an account</h1>
+            <p>Ready to dive back into your learning journey</p>
+        <div class="form">
+            <form [formGroup]="messageForm" action="javascript.void(0)" (ngSubmit)="onSubmit()">
+            <div class="name-flex">
+                <label>
+                <input formControlName="first_name" type="name" id="first_name" placeholder="first name" class="first_name input"/>
+                <p *ngIf="messageForm.get('first_name')?.hasError('pattern')" class="red">Name is required</p>
+                </label>
+                <label>
+                <input formControlName="last_name" type="name" id="last_name" placeholder="last name" class="last_name input"/>
+                <p *ngIf="messageForm.get('last_name')?.hasError('pattern')" class="red">Name is required</p>
+                </label>
+            </div>
+                <label></label>
+                <input formControlName="user_email" type="email" id="user_email" placeholder="Email address" class="email input" />
+                <p *ngIf="messageForm.get('user_email')?.hasError('email')" class="red">email is required</p>
+    
+                <label></label>
+                <input formControlName="password" type="password" id="ph1" placeholder="password" class="password input" />
+                <p *ngIf="messageForm.get('password')?.hasError('pattern')" class="red">Use caps, @ symbol, 1-9 number, maximum of 8 letters</p>
+    
+                <label></label>
+                <input formControlName="re_enter_password" type="password" class="re_enter_password input" id="re_enter_password"  placeholder="Re-enter password" />
+                <p *ngIf="messageForm.get('re_enter_password')?.hasError('passwordMismatch')" class="red">password does not match</p>
+                
+                <label class="checkbox">
+                <input formControlName="checkbox_1" type="checkbox" class="checkbox-1" name="checkbox_1" /> 
+                I agree to the Privacy policy</label>
+    
+                <label>
+                    <input formControlName="checkbox_2" type="checkbox" class="checkbox-2" name="checkbox_2"/> I agree to the Terms and condition
+                </label>
+
+                <button type="submit" class="submit" [disabled]="!messageForm.valid" (click)="signInPopup.openPopup()">Sign Up</button>
+                <p>Already have an account ?
+                <button type="button" class="sign-in inter-fonts"   (click)="signInPopup.openPopup()"><b>Sign In</b></button> </p>
+                <app-sign-in-popup #signInPopup></app-sign-in-popup>
+                <h3 id="h3"></h3>
+            </form>
+        </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>
+
+
+

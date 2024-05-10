@@ -1,0 +1,28 @@
+<section class="header">
+
+</section>
+
+
+<div class="navbar inter-fonts" >
+<div class="logo-flex">
+    <img src="../../assets/title.PNG" alt="">
+</div>
+<div class="navbar-flex" id="open" [ngClass]="status ? 'success' : 'hidden'">
+    <div id="open" [ngClass]="status ? 'success' : 'hidden'">
+    <ul>
+    <div class="menu-close" >
+        <h3 (click)="clickEvent()">&#8999;</h3>
+    </div>
+    <a routerLink="/home" routerLinkActive="active"><li>Find Tutor</li></a>
+    <a routerLink="/aboutus" routerLinkActive="active"><li>Support</li></a>
+    <a><li class="nested-nav" routerLinkActive="active">Learn &#8595;<br></li></a>
+    <a routerLink="/gallery" routerLinkActive="active"><li>Apply For Tutor</li></a>
+    <a routerLink="/contactus" routerLinkActive="active"><li> EN</li></a>
+    <button type="button" class="signin" routerLink="/signup">Login & SignUp</button>
+    </ul>
+    </div>
+</div>
+<div class="menu-open">
+    <h3 (click)="clickEvent()">&#9776;</h3>
+</div>
+</div>

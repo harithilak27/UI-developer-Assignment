@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.inter-fonts {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+}
